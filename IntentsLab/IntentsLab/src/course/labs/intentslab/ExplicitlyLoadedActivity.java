@@ -58,12 +58,14 @@ public class ExplicitlyLoadedActivity extends Activity
 		// TODO - Create a new intent and save the input from the EditText field
 		// as an extra
 		
-		Intent explicitIntent = new Intent();
-		explicitIntent.putExtra(android.content.Intent.EXTRA_RETURN_RESULT, returnedText);
+		Intent returnIntent = new Intent(); //getIntent()
+		returnIntent.putExtra(android.content.Intent.EXTRA_TEXT, returnedText.toString());
 
 		// TODO - Set Activity's result with result code RESULT_OK
+		setResult(RESULT_OK, returnIntent);
 
 		// TODO - Finish the Activity
+		finish();
 
 	}
 }

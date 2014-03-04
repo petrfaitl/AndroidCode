@@ -76,10 +76,11 @@ public class ActivityLoaderActivity extends Activity
 		// class
 		
 		Intent explicitIntent = new Intent(ActivityLoaderActivity.this, ExplicitlyLoadedActivity.class);
-		startActivityForResult(explicitIntent, RESULT_OK);
+		
 
 		// TODO - Start an Activity using that intent and the request code
 		// defined above
+		startActivityForResult(explicitIntent, GET_TEXT_REQUEST_CODE);
 
 	}
 
@@ -92,17 +93,24 @@ public class ActivityLoaderActivity extends Activity
 
 		// TODO - Create a base intent for viewing a URL
 		// (HINT: second parameter uses parse() from the Uri class)
+		
+		Intent implicitIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(URL) );
+		Intent chooserIntent = Intent.createChooser(implicitIntent, CHOOSER_TEXT) ;
 
 		// TODO - Create a chooser intent, for choosing which Activity
 		// will carry out the baseIntent. Store the Intent in the
 		// chooserIntent variable below. HINT: using the Intent class'
-		// createChooser())
+		//createChooser())
 
-		Intent chooserIntent = null;
+		
 
 		Log.i(TAG, "Chooser Intent Action:" + chooserIntent.getAction());
 		// TODO - Start the chooser Activity, using the chooser intent
-		startActivity(chooserIntent);
+		if(implicitIntent.resolveActivity(getPackageManager()) != null)
+				{
+					startActivity(chooserIntent);
+				}
+		
 
 	}
 
@@ -115,6 +123,14 @@ public class ActivityLoaderActivity extends Activity
 		// TODO - Process the result only if this method received both a
 		// RESULT_OK result code and a recognized request code
 		// If so, update the Textview showing the user-entered text.
+		if(requestCode ==GET_TEXT_REQUEST_CODE && resultCode== RESULT_OK)
+		{
+			mUserTextView.setText(data.getCharSequenceExtra(android.content.Intent.EXTRA_TEXT));
+		}else
+		{
+			mUserTextView.setText(R.string.no_text_entered);
+			
+		}
 
 	}
 }
