@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mileage_array">
+        <item>400m</item>
+        <item>800m</item>
+        <item>1000m</item>
+        <item>1200m</item>
+        <item>1500m</item>
+        <item>1600m</item>
+        <item>1mile</item>
+        <item>5k</item>
+        <item>10k</item>
+        <item>Half-marathon</item>
+        <item>Marathon</item>
+    </string-array>
+  
+</resources>

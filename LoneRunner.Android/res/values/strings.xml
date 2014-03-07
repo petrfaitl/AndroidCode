@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LoneRunner</string>
+    <string name="pace_calculator">Pace Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="subtitle_convert_activity">Enter Distance &amp; Time</string>
+    <string name="moving_time">MOVING TIME</string>
+    <string name="hh_mm_ss">hh:mm:ss</string>
+    <string name="distance">DISTANCE</string>
+    <string name="pace">PACE</string>
+    <string name="enter_distance">Enter Distance</string>
+    <string name="results">Results</string>
+    <string name="select_units">SELECT UNITS</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="custom_distance">CUSTOM DISTANCE</string>
+    <string name="text_on">ON</string>
+    <string name="text_off">OFF</string>
+    <string name="units">units</string>
+    <string name="cancel">Cancel</string>
+    <string name="time_set">Set time</string>
+    
+    
+
+</resources>

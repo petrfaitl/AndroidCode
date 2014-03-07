@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mileage_unit_array">
+        <item>km</item>
+        <item>miles</item>
+    </string-array>   
+</resources>
