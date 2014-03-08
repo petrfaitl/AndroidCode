@@ -79,8 +79,7 @@
 			        android:layout_weight="1"
 			        android:layout_height="wrap_content"
 			        android:gravity="bottom"
-			        style="@style/PickerEditText"
-			        android:prompt="@string/units"/>
+			        style="@style/PickerEditText"/>
 	    </LinearLayout>
 	    
 	    <Spinner 
@@ -89,6 +88,8 @@
 	        android:layout_height="wrap_content"
 	        style="@style/PickerEditText"
 	        android:prompt="@string/select_units"
+	        android:spinnerMode="dialog"
+	        
 	        android:layout_marginTop="@dimen/activity_vertical_margin"
 	        android:layout_below="@id/subtitle_convert_activity"
 	        />
